@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const rootElement = document.getElementById('root');
+const root = ReactDOM.createRoot(rootElement);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const renderApp = (isOnline) => {
+  root.render(
+    <React.StrictMode>
+      {isOnline ? <App /> : (
+        <div style={{ minHeight: '100vh', minWidth: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <p>You need to be online for Pay.</p>
+        </div>
+      )}
+    </React.StrictMode>
+  );
+};
+
+const updateOnlineStatus = () => {
+  renderApp(navigator.onLine);
+};
+
+window.addEventListener('online', updateOnlineStatus);
+window.addEventListener('offline', updateOnlineStatus);
+
+renderApp(navigator.onLine);

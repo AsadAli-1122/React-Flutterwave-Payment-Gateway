@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React Flutterwave Payment Gateway
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This is a simple React application that integrates the Flutterwave payment gateway. It provides a smooth payment experience, ensuring zero errors during transactions. Additionally, it detects offline mode and prompts users to reconnect when they lose internet connectivity.
 
-## Available Scripts
+## What is it for?
+This project allows you to easily accept online payments through Flutterwave in a React-based web application. It offers a user-friendly payment form where customers can enter their payment details and make transactions securely.
 
-In the project directory, you can run:
+## How to Run
+To run this project locally, follow these steps:
 
-### `npm start`
+1. Clone this repository:
+```bash
+  git clone https://github.com/AsadAli-1122/React-Flutterwave-Payment-Gateway
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Navigate to the project directory:
+```bash
+  cd React-Flutterwave-Payment-Gateway
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Install dependencies using npm:
+```bash
+  npm install
+```
 
-### `npm test`
+4. Replace the public key in `app.js` with your Flutterwave public key.
+```bash
+    public_key: "YOUR_FLUTTERWAVE_PUBLIC_KEY",
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Start the application:
+```bash
+  npm start
+```
 
-### `npm run build`
+6. Use the following test card details for testing:
+- Card Number: 4187427415564246 (or use other test cards provided)
+- Expiry Date: 09/32 (or use other valid dates)
+- CVV: 828 (or use other test CVVs)
+- OTP: 123456 (or use other test OTPs)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+7. View the payment results in the console.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Note
+Please ensure that you have a Flutterwave account and valid public and secret API keys configured for this project. This is a sample project, and you should handle sensitive payment information securely in a production environment.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
